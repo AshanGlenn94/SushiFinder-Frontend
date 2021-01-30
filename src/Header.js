@@ -23,7 +23,7 @@ function Header() {
           <span className="header__optionLineOne">Health Benifits</span>
           <span className="header__optionLineTwo">of Sushi</span>
         </div>
-        <Link to="/login">
+        <Link to="/login" style={{ textDecoration: "none" }}>
           <div className="header__option">
             <span className="header__optionLineOne">Hello Guest</span>
             <span className="header__optionLineTwo">Sign In</span>

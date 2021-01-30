@@ -49,7 +49,6 @@ const RestaurantSection = ({
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
                   <Button
-                    to="home"
                     smooth={true}
                     duration={500}
                     spy={true}
@@ -60,7 +59,12 @@ const RestaurantSection = ({
                     dark2={dark2 ? 1 : 0}
                     onClick={handleClickRestaurant}
                   >
-                    {buttonLabel}
+                    <Link
+                      to="/cart"
+                      style={{ textDecoration: "none", color: "white" }}
+                    >
+                      {buttonLabel}
+                    </Link>
                   </Button>
                 </BtnWrap>
               </TextWrapper>

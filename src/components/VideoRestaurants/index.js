@@ -24,14 +24,6 @@ const VideoRestaurants = () => {
     setHover(!hover);
   };
 
-  // const goToHome = (e) => {
-  //   <Router>
-  //     <Switch>
-  //       <Route path='/'></Route>
-  //     </Switch>
-  //   </Router>;
-  // };
-
   return (
     <HeroContainer id="home">
       <HeroBg>
@@ -45,8 +37,10 @@ const VideoRestaurants = () => {
         />
       </HeroBg>
       <HeroContent>
-        <HeroH1>Restaurants</HeroH1>
-        <HeroP>Findout the best restaurants only for SUSHI LOVERS</HeroP>
+        <HeroH1>Sushibars</HeroH1>
+        <HeroP>
+          Findout the best restaurants reserved only for SUSHI LOVERS
+        </HeroP>
         <HeroBtnWrapper>
           <Route path="/">
             <Button

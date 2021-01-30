@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Video from "../../videos/video.mp4";
 import { Button } from "../ButtonElement";
-import Home from "../../Home";
-import Checkout from "../../Checkout";
+import Restaurants from "../Restaurants";
 import {
   HeroContainer,
   HeroBg,
@@ -23,18 +22,11 @@ const HeroSection = () => {
     setHover(!hover);
   };
 
-  // const goToHome = (e) => {
-  //   <Router>
-  //     <Switch>
-  //       <Route path='/'></Route>
-  //     </Switch>
-  //   </Router>;
-  // };
-
   return (
     <HeroContainer id="home">
       <HeroBg>
         <VideoBg
+          playbackRate="0.2"
           id="videoBG"
           autoPlay
           loop
@@ -46,11 +38,12 @@ const HeroSection = () => {
       <HeroContent>
         <HeroH1>Sushi Finder</HeroH1>
         <HeroP>Made for sushi lovers.</HeroP>
-        <HeroBtnWrapper>
-          <Route path="/">
+        <Link
+          style={{ textDecoration: "none", color: "white" }}
+          to="/restaurants"
+        >
+          <HeroBtnWrapper>
             <Button
-              // to='/'
-              onClick={() => Checkout.push("../../Checkout")}
               onMouseEnter={onHover}
               onMouseLeave={onHover}
               primary="true"
@@ -61,14 +54,25 @@ const HeroSection = () => {
               exact="true"
               offset={-80}
             >
-              Get started {hover ? <ArrowForward /> : <ArrowRight />}
+              <Link
+                to="/restaurants"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                Order Now {hover ? <ArrowForward /> : <ArrowRight />}
+              </Link>
             </Button>
-          </Route>
-        </HeroBtnWrapper>
+          </HeroBtnWrapper>
+        </Link>
       </HeroContent>
     </HeroContainer>
   );
 };
+
+{
+  /* <Link style={{ textDecoration: "none", color: "white" }} to="/restaurants">
+  Restaurants
+</Link>; */
+}
 
 export default HeroSection;
 

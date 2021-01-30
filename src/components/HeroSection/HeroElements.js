@@ -104,5 +104,5 @@ export const ArrowRight = styled(MdKeyboardArrowRight)`
   font-size: 20px;
 `;
 
-const video = document.querySelector("videoBG");
-// video.playbackRate = 0.5;
+// let videoEl = document.getElementById("videoBG");
+// videoEl.playbackRate = 0.5;

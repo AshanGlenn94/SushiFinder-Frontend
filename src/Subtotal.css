@@ -29,3 +29,35 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
 }
+
+.form {
+  display: flex;
+  justify-content: flex-start;
+  width: 200px;
+  max-width: 400px;
+}
+
+.btn_submit {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+.form_container {
+  background-color: lightgray;
+  width: 600px;
+  height: 100vh;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+​.login__container > form > input {
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: lightgray;
+  width: 98%;
+}
