@@ -34,8 +34,7 @@ function Login() {
     })
       .then((res) => {
         if (res.status === 200) {
-          // console.log("Login Success");
-          <Link to="/cart" />;
+          console.log("Login Success");
         } else {
           const error = new Error(res.error);
           throw error;
@@ -45,9 +44,6 @@ function Login() {
         console.error(err);
         alert("Error logging in please try again");
       });
-
-    // e.target.email.value = "";
-    // e.target.password.value = "";
   };
 
   // Registration Part Handeling
@@ -88,13 +84,12 @@ function Login() {
         console.error(err);
         alert("Error Signup in please try again");
       });
-    // e.target.email.value = "";
-    // e.target.password.value = "";
   };
 
   const handleFaded = () => {
     setIsFaded(!isFaded);
   };
+
   return (
     <div className="loginPage">
       <div
@@ -111,9 +106,11 @@ function Login() {
             value={password}
             onChange={handlePasswordInput}
           />
-          <button className="loginAll" type="submit">
-            Sign In
-          </button>
+          <Link to="/cart">
+            <button className="loginAll" type="submit">
+              Sign In
+            </button>
+          </Link>
         </form>
         <p>
           By signing-in you agree to the Conditions of Use & Sale. Please see
@@ -124,7 +121,7 @@ function Login() {
           Create your Account
         </button>
       </div>
-      <Link to="/cart">
+      <Link to="/">
         <img className="loginLogo" src={sushiLogo} alt="" />
       </Link>
       {/* /////////////////////////////////////////////////////////////////////////////       */}
@@ -136,11 +133,6 @@ function Login() {
         <form onSubmit={handleSubmitRegister}>
           <h5>Name</h5>
           <input type="text" value={namer} onChange={handleNameInputR} />
-          {/*
-          <h5>Last Name</h5>
-          <input type='text' /> */}
-          {/* <h5>Address</h5>
-          <input type='text' /> */}
           <h5>E-mail</h5>
           <input type="text" value={emailr} onChange={handleEmailInputR} />
           <h5>Password</h5>
@@ -149,11 +141,11 @@ function Login() {
             value={passwordr}
             onChange={handlePasswordInputR}
           />
-          {/* <h5>Re-enter Password</h5>
-          <input type='password' /> */}
-          <button className="loginAll" type="submit">
-            Create Account
-          </button>
+          <Link to="/cart">
+            <button className="loginAll" type="submit">
+              Create Account
+            </button>
+          </Link>
         </form>
         <p>
           By signing-Up you agree to the Conditions of Use & Sale. Please see
